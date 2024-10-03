@@ -17,7 +17,10 @@ fs.access(logsDirectory, (error) => {
                 }
             })
         }
-
-        
+        fs.rmdir(logsDirectory, (err) => { //remove log directory
+            if(err){
+                console.log(err);
+            }
+        });
     }
 })
